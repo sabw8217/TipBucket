@@ -53,6 +53,6 @@ class TipsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def tip_params
-      params[:tip]
+      params[:tip].permit!
     end
 end
