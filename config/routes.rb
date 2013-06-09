@@ -47,5 +47,9 @@ TipBucket::Application.routes.draw do
   #     resources :products
   #   end
 
-  resources :tips
+  resources :tips do
+    collection do
+      get :done
+    end
+  end
 end
