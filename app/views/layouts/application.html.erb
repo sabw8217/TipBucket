@@ -13,18 +13,11 @@
         <div class="container">
           <a class="brand" href="#">SF POLICE</a>
           <ul class="nav">
-            <li class="active"><a href="<%= new_tip_path %>">TIPS</a></li>
+            <li class="active"><a href="<%= tips_path %>">TIPS</a></li>
             <li><a href="<%= tips_path %>">ANALYTICS</a></li>
           </ul>
           <ul class="nav pull-right">
             <li><a href="#">SIGN OUT</a></li>
-            <li class="dropdown" id="locale_sel">
-              <a id="drop3" class="dropdown-toggle" role="button" data-toggle="dropdown" href="#"><%=  I18n.locale %><b class="caret"></b></a>
-              <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
-                <li role="presentation"><a role="menuitem" href="<%= new_tip_path(:locale => 'en') %>">English</a></li>
-                <li role="presentation"><a role="menuitem" href="<%= new_tip_path(:locale => 'es') %>">Español</a></li>
-              </ul>
-            </li>
           </ul>
         </div>
       </div>
@@ -34,10 +27,5 @@
         <%= yield %>
 
     </div>
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $('#locale-sel').dropdown();
-      })
-    </script>
 </body>
 </html>
