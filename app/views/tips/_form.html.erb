@@ -1,7 +1,14 @@
 <%= form_for(@tip) do |f| %>
-  <%= f.label :location, "location" %><%= f.text_field :location %>
+  <%= f.text_field :location %>
+  <%= f.label :location, "Location" %>
   <%= f.text_field :crime_type %>
-  <%= f.check_box :has_occurred %>
+  <%= f.label :crime_type, "Type of crime" %>
+  <%= f.text_area :description %>
+  <%= f.label :description, "Description" %>
+  <%= f.label :description, "Height" %>
+  <%= f.label :description, "Hair Color" %>
+  <%= f.label :description, "Race" %>
+  <%= f.label :description, "Gender" %>
   <% if @tip.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@tip.errors.count, "error") %> prohibited this tip from being saved:</h2>
@@ -16,5 +23,6 @@
 
   <div class="actions">
     <%= f.submit %>
+    <%= f.button(value="Cancel") %>
   </div>
 <% end %>
