@@ -1,6 +1,6 @@
 <%= form_for(@tip) do |f| %>
     <div class="row-fluid">
-        <div class="span12 incident-section"><h1><%= t(:incident) %></h1></div>
+        <div class="span12 incident-section section-title"><h1><%= t(:incident) %></h1></div>
     </div>
     <div class="row-fluid">
         <div class="span4">
@@ -46,7 +46,7 @@
         </div>
         <div class="span4">
             <div class="form-label">
-                <%= f.label :crime_type, "Time of Crime", :class => 'tlabel' %>
+                <%= f.label :crime_type, "Type of Crime", :class => 'tlabel' %>
             </div>
             <select>
                 <option default=true>Select One</option>
@@ -70,7 +70,7 @@
  <% end %>
 
     <div class="row-fluid">
-        <div class="span12 suspect-section">
+        <div class="span12 suspect-section section-title">
             <h1>Suspect Description</h1>
         </div>
     </div>
