@@ -13,6 +13,7 @@ class TipsController < ApplicationController
   # GET /tips/new
   def new
     @tip = Tip.new
+    @tip.occurred_at = Time.now
   end
 
   # GET /tips/1/edit

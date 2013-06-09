@@ -6,34 +6,13 @@
   <button id="get_location">Use my current location</button>
   <br/>
   <%= f.label :has_occurred, "When", :class => 'tlabel' %>
-  <select>
-    <option default=true>Select a time</option>
-    <option>1 PM</option>
-    <option>2 PM</option>
-    <option>3 PM</option>
-    <option>4 PM</option>
-    <option>5 PM</option>
-    <option>6 PM</option>
-    <option>7 PM</option>
-    <option>8 PM</option>
-    <option>9 PM</option>
-    <option>10 PM</option>
-    <option>11 PM</option>
-    <option>12 PM</option>
-    <option>1 AM</option>
-    <option>2 AM</option>
-    <option>3 AM</option>
-    <option>4 AM</option>
-    <option>5 AM</option>
-    <option>6 AM</option>
-    <option>7 AM</option>
-    <option>8 AM</option>
-    <option>9 AM</option>
-    <option>10 AM</option>
-    <option>11 AM</option>
-    <option>12 AM</option>
-  </select>
-  <%= f.check_box :has_occurred, :class => 'tlabel' %><%= f.label :has_occurred, "Not Yet", :class => 'tlabel' %>
+  <div class="btn-group">
+    <button class="btn">Has occurred</button>
+    <button class="btn">Not yet</button>
+  </div>
+  <br/>
+  <%= f.datetime_local_field :occurred_at_local, :step => 1 %>
+
   <br/>
   <%= f.label :crime_type, "What", :class => 'tlabel' %>
   <select>
