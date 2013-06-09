@@ -1,10 +1,42 @@
 <%= form_for(@tip) do |f| %>
   <h1>The Incident</h1>
-  <%= f.label :location, "Where", :class => 'tlabel' %><button id="get_location">Use my current location</button>
-  <%= f.label :has_occurred, "Has this crime occurred?" %>
-  <%= f.button(value="Not Yet") %><%= f.button(value="Already Happened") %>
-  <%= f.check_box :crime_type %><%= f.label :crime_type, "Type of crime" %>
-   <select>
+  <%= f.label :location, "Where", :class => 'tlabel' %>
+  <%= f.text_field :location %>
+  <br/>
+  <button id="get_location">Use my current location</button>
+  <br/>
+  <%= f.label :has_occurred, "When", :class => 'tlabel' %>
+  <select>
+    <option default=true>Select a time</option>
+    <option>1 PM</option>
+    <option>2 PM</option>
+    <option>3 PM</option>
+    <option>4 PM</option>
+    <option>5 PM</option>
+    <option>6 PM</option>
+    <option>7 PM</option>
+    <option>8 PM</option>
+    <option>9 PM</option>
+    <option>10 PM</option>
+    <option>11 PM</option>
+    <option>12 PM</option>
+    <option>1 AM</option>
+    <option>2 AM</option>
+    <option>3 AM</option>
+    <option>4 AM</option>
+    <option>5 AM</option>
+    <option>6 AM</option>
+    <option>7 AM</option>
+    <option>8 AM</option>
+    <option>9 AM</option>
+    <option>10 AM</option>
+    <option>11 AM</option>
+    <option>12 AM</option>
+  </select>
+  <%= f.check_box :has_occurred, :class => 'tlabel' %><%= f.label :has_occurred, "Not Yet", :class => 'tlabel' %>
+  <br/>
+  <%= f.label :crime_type, "What", :class => 'tlabel' %>
+  <select>
     <option default=true>Select a crime type</option>
     <option>1</option>
     <option>2</option>
@@ -12,8 +44,13 @@
     <option>4</option>
     <option>5</option>
   </select>
-  <%= f.label "Please describe the perpetrator" %>
-  <%= f.button(value="Male") %><%= f.button(value="Female") %>
+  <h1>The Perpetrator</h1>
+  <%= f.label "Gender", :class => 'tlabel' %>
+  <div class="btn-group">
+    <button class="btn">Male</button>
+    <button class="btn">Female</button>
+    <button class="btn">Unknown</button>
+  </div>
   <br/>
   <%= f.label :race, "Race", :class => 'tlabel' %>
   <select>
@@ -24,8 +61,25 @@
     <option>4</option>
     <option>5</option>
   </select>
-  <%= f.label :gender, "Gender" %>
-  <%= f.label :race, "Race" %>
+  <br/>
+  <%= f.label :height, "Height", :class => 'tlabel' %>
+  <div class="btn-group">
+    <button class="btn">Short</button>
+    <button class="btn">Average</button>
+    <button class="btn">Tall</button>
+  </div>
+  <br/>
+  <%= f.label :haircolor, "Hair Color", :class => 'tlabel' %>
+  <div class="btn-group">
+    <button class="btn">Black</button>
+    <button class="btn">Brown</button>
+    <button class="btn">Blonde</button>
+    <button class="btn">Other</button>
+  </div>
+  <br/>
+  <%= f.label :description, "Details", :class => 'tlabel' %>
+  <%= f.label :description, "Please share additional details:" %>
+  <%= f.text_area :description %>
   <% if @tip.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@tip.errors.count, "error") %> prohibited this tip from being saved:</h2>
