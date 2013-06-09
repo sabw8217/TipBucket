@@ -1,6 +1,6 @@
 <%= form_for(@tip) do |f| %>
-  <%= f.label :location, "Where is this crime?" %>
-  <%= f.text_field :location %>
+  <h1>The Incident</h1>
+  <%= f.label :location, "Where", :class => 'tlabel' %><button id="get_location">Use my current location</button>
   <%= f.label :has_occurred, "Has this crime occurred?" %>
   <%= f.button(value="Not Yet") %><%= f.button(value="Already Happened") %>
   <%= f.check_box :crime_type %><%= f.label :crime_type, "Type of crime" %>
@@ -26,7 +26,6 @@
   </select>
   <%= f.label :gender, "Gender" %>
   <%= f.label :race, "Race" %>
-  <%= f.label :gender, "Gender" %>
   <% if @tip.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@tip.errors.count, "error") %> prohibited this tip from being saved:</h2>
@@ -39,6 +38,8 @@
     </div>
   <% end %>
 
+  <%= f.hidden_field :lat %>
+  <%= f.hidden_field :long %>
   <div class="actions">
     <%= f.submit %>
     <%= f.button(value="Cancel") %>
