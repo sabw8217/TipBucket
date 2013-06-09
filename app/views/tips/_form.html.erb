@@ -16,9 +16,10 @@
         </div>
         <div class="span4">
             <div class="form-label">
-                <%= f.label :has_occurred, t(:when), :class => 'tlabel' %>
+                <%= f.label :when_happened, t(:when), :class => 'tlabel' %>
             </div>
-            <%= f.select :occurred_at, ['Happened Now','1 PM','2 PM','3 PM','4 PM','5 PM','6 PM','7 PM','8 PM','9 PM','10 PM','11 PM','12 PM','1 AM','2 AM','3 AM','4 AM','5 AM','6 AM','7 AM','8 AM','9 AM','10 AM','11 AM','12 AM'] %>
+            <%= f.select :when_happened, ['Just Happened','In The Last Hour',
+                                        'Today','Yesterday','2 or more days ago'] %>
             <label class="checkbox">
                 <input type="checkbox"><%= t(:hasnt_hap) %>
             </label>
