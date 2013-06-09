@@ -1,14 +1,32 @@
 <%= form_for(@tip) do |f| %>
+  <%= f.label :location, "Where is this crime?" %>
   <%= f.text_field :location %>
-  <%= f.label :location, "Location" %>
-  <%= f.text_field :crime_type %>
-  <%= f.label :crime_type, "Type of crime" %>
-  <%= f.text_area :description %>
-  <%= f.label :description, "Description" %>
-  <%= f.label :description, "Height" %>
-  <%= f.label :description, "Hair Color" %>
-  <%= f.label :description, "Race" %>
-  <%= f.label :description, "Gender" %>
+  <%= f.label :has_occurred, "Has this crime occurred?" %>
+  <%= f.button(value="Not Yet") %><%= f.button(value="Already Happened") %>
+  <%= f.check_box :crime_type %><%= f.label :crime_type, "Type of crime" %>
+   <select>
+    <option default=true>Select a crime type</option>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+  </select>
+  <%= f.label "Please describe the perpetrator" %>
+  <%= f.button(value="Male") %><%= f.button(value="Female") %>
+  <br/>
+  <%= f.label :race, "Race", :class => 'tlabel' %>
+  <select>
+    <option default=true>Select a race</option>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+  </select>
+  <%= f.label :gender, "Gender" %>
+  <%= f.label :race, "Race" %>
+  <%= f.label :gender, "Gender" %>
   <% if @tip.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@tip.errors.count, "error") %> prohibited this tip from being saved:</h2>
