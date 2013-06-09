@@ -1,7 +1,31 @@
 <%= form_for(@tip) do |f| %>
-  <%= f.label :location, "location" %><%= f.text_field :location %>
-  <%= f.text_field :crime_type %>
-  <%= f.check_box :has_occurred %>
+  <h1>The Incident</h1>
+  <%= f.label :location, "Where", :class => 'tlabel' %><button id="get_location">Use my current location</button>
+  <%= f.label :has_occurred, "Has this crime occurred?" %>
+  <%= f.button(value="Not Yet") %><%= f.button(value="Already Happened") %>
+  <%= f.check_box :crime_type %><%= f.label :crime_type, "Type of crime" %>
+   <select>
+    <option default=true>Select a crime type</option>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+  </select>
+  <%= f.label "Please describe the perpetrator" %>
+  <%= f.button(value="Male") %><%= f.button(value="Female") %>
+  <br/>
+  <%= f.label :race, "Race", :class => 'tlabel' %>
+  <select>
+    <option default=true>Select a race</option>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+  </select>
+  <%= f.label :gender, "Gender" %>
+  <%= f.label :race, "Race" %>
   <% if @tip.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@tip.errors.count, "error") %> prohibited this tip from being saved:</h2>
@@ -14,7 +38,11 @@
     </div>
   <% end %>
 
+  <%= f.hidden_field :lat %>
+  <%= f.hidden_field :long %>
+  <%= f.hidden_field :geocoded %>
   <div class="actions">
     <%= f.submit %>
+    <%= f.button(value="Cancel") %>
   </div>
 <% end %>

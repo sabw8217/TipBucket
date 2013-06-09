@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130609000801) do
+ActiveRecord::Schema.define(version: 20130609025944) do
 
   create_table "tips", force: true do |t|
     t.string   "location"
@@ -25,6 +25,9 @@ ActiveRecord::Schema.define(version: 20130609000801) do
     t.string   "race"
     t.string   "gender"
     t.string   "clothes"
+    t.decimal  "lat",          precision: 10, scale: 6
+    t.decimal  "long",         precision: 10, scale: 6
+    t.boolean  "geocoded"
   end
 
 end

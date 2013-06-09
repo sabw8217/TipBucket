@@ -1,5 +1,13 @@
-<h1>New tip</h1>
+<h1>Leave a tip</h1>
 
-<%= render :partial => "tips/form" %>
+<%= render :partial => "form" %>
 
 <%= link_to 'Back', tips_path %>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $("#get_location").click(function() {
+      getLocation();
+      return false;
+    });
+  });
+</script>
