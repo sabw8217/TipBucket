@@ -1,39 +1,39 @@
-<div class="list-container">
-  <div class="row">
-    <div class="today span12">
-      <div class="date-box">
-        <%= Date.today.strftime("%b %-d, %Y") %>
+<div class="container">
+  <div class="list-container">
+    <div class="row">
+      <div class="today span12">
+        <div class="date-box">
+          <%= Date.today.strftime("%b %-d, %Y") %>
+        </div>
       </div>
-    </div>
 
-    <div class="tips-list">
-      <div class="span12">
-        <% @tips.each do |tip| %>
-          <div class="tip">
-            <div class="left">
-              <div class="date">
-                <%= tip.updated_at.strftime("%l:%M %p") %>
-              </div>
-              <div class="take-action">
-                Take action
-              </div>
-            </div>
-            <div class="tip-box">
-              <div class="tip-title">
-                <div class="crime-type"><%= tip.crime_type %></div>
-                <% if tip.location %>
-                  <div class="location">NEXT TO <%= tip.location.upcase %></div>
-                <% end %>
-              </div>
-              <div class="tip-content">
-                <div class="suspect">
-                  <strong><% if tip.height or tip.race or tip.gender %><%= tip.height %></strong> <strong><%= tip.race %> <%= tip.gender %></strong> with <% end %><strong><% if tip.haircolor %><%= tip.haircolor %></strong> hair <% end %><% if tip.clothes %>wearing <strong><%= tip.clothes %><% end %></strong>
+      <div class="tips-list">
+        <div class="span12">
+          <% @tips.each do |tip| %>
+            <div class="tip">
+              <div class="left">
+                <div class="date">
+                  <%= tip.updated_at.strftime("%l:%M %p") %>
                 </div>
-                <div><%= tip.description %></div>
+                <div class="take-action">
+                  Take action
+                </div>
+              </div>
+              <div class="tip-box">
+                <div class="tip-title">
+                  <div class="crime-type"><%= tip.crime_type %></div>
+                  <div class="location">NEXT TO <%= tip.location.upcase %></div>
+                </div>
+                <div class="tip-content">
+                  <div class="suspect">
+                    <strong><% if tip.height or tip.race or tip.gender %><%= tip.height %></strong> <strong><%= tip.race %> <%= tip.gender %></strong> with <% end %><strong><% if tip.haircolor %><%= tip.haircolor %></strong> hair <% end %><% if tip.clothes %>wearing <strong><%= tip.clothes %><% end %></strong>
+                  </div>
+                  <div><%= tip.description %></div>
+                </div>
               </div>
             </div>
-          </div>
-        <% end %>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>

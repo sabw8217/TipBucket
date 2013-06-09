@@ -8,7 +8,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-    <div class="navbar navbar-fixed-top">
+    <div class="navbar">
       <div class="navbar-inner">
         <div class="container">
           <a class="brand" href="#">SF POLICE</a>
@@ -22,10 +22,19 @@
         </div>
       </div>
     </div>
-    <div class="container">
+    
 
         <%= yield %>
 
+<<<<<<< HEAD
+    
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#locale-sel').dropdown();
+      })
+    </script>
+=======
     </div>
+>>>>>>> 5f5174b9302a9850da263f824624c56a948ac7e3
 </body>
 </html>

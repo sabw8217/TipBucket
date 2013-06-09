@@ -21,7 +21,6 @@
 }
 
 body {
-	padding-top: 60px;
 	background: #f0f1f2;
 	font-family: 'Gotham';
 }
@@ -104,6 +103,7 @@ body {
 .incident-section {
 	text-align: center;
 	margin-bottom: 80px;
+	margin-top: 80px;
 }
 
 input[type="text"] {
@@ -137,3 +137,53 @@ input.larger-checkbox {
 	font-weight: 400;
 	font-size: 36px;
 }
+
+.submit-title {
+	font-family: 'Plantin';
+	text-align: center;
+	font-size: 72px;
+	line-height: 360px;
+	color: #fff;
+	position: relative;
+	z-index: 1;
+	font-weight: 400;
+}
+
+.map-container {
+	height: 360px;
+	border-bottom: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+	position: relative;
+	background-image: url("map.png");
+	background-color: #a7bee0;
+	background-repeat: no-repeat;
+	background-position: top;
+}
+
+.explore-button {
+	width: 205px;
+	height: 50px;
+	text-align: center;
+	margin: 0 auto;
+	background: #000;
+	color: #fff;
+	opacity: 0.5;
+	position: absolute;
+	line-height: 50px;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.black-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0.75;
+	z-index: 0;
+}
+
