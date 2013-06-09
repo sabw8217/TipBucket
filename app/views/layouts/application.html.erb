@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<%= I18n.locale %>">
 <head>
   <title>TipBucket</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -7,6 +7,11 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#locale-sel').dropdown();
+    })
+  </script>
 </head>
 <body>
     <div class="navbar navbar-fixed-top">
@@ -19,6 +24,13 @@
           </ul>
           <ul class="nav pull-right">
             <li><a href="#">SIGN OUT</a></li>
+            <li class="dropdown" id="locale_sel">
+              <a id="drop3" class="dropdown-toggle" role="button" data-toggle="dropdown" href="#"><%=  I18n.locale %><b class="caret"></b></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
+                <li role="presentation"><a role="menuitem" href="<%= new_tip_path(:locale => 'en') %>">English</a></li>
+                <li role="presentation"><a role="menuitem" href="<%= new_tip_path(:locale => 'es') %>">Spanish</a></li>
+              </ul>
+            </li>
           </ul>
         </div>
       </div>
