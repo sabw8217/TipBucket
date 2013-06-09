@@ -11,7 +11,11 @@
   $(document).ready(function() {
 
     $(".explore-button").click(function() {
-        $('.map-container').animate({height: "606px"});
+        $('.map-container').animate({
+          height: "606px"
+        });
+        $('.map-container').css('background-image', "url('/assets/map.png')");
+        $('.map-container').css('background-color', "#A5BFDD");
         $('.submit-title, .black-overlay').fadeOut('fast');
         $('.explore-button').fadeOut('fast');
     });
