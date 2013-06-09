@@ -17,11 +17,22 @@ class TipsControllerTest < ActionController::TestCase
   end
 
   test "should create tip" do
+    height = '6\'2\"'
+
     assert_difference('Tip.count') do
-      post :create, tip: { :location => "foo", :crime_type => "bar" }
+      post :create, tip: {
+        :location => "foo",
+        :crime_type => "bar",
+        :has_occurred => true,
+        :height => height}
     end
 
     assert_redirected_to tip_path(assigns(:tip))
+
+    assert_equal "foo", assigns(:tip).location
+    assert_equal "bar", assigns(:tip).crime_type
+    assert assigns(:tip).has_occurred
+    assert_equal height, assigns(:tip).height
   end
 
   test "should show tip" do
