@@ -3,7 +3,7 @@ class TipsController < ApplicationController
 
   # GET /tips
   def index
-    @tips = Tip.all
+    @tips = Tip.all.order('updated_at DESC')
   end
 
   # GET /tips/1
@@ -22,6 +22,13 @@ class TipsController < ApplicationController
   # POST /tips
   def create
     @tip = Tip.new(tip_params)
+
+    if @tip.geocoded?
+      geocode_results = Geocoder.search([@tip.lat, @tip.long])
+      if geocode_results && geocode_results.first
+        @tip.location = geocode_results.first.formatted_address
+      end
+    end
 
     if @tip.save
       redirect_to @tip, notice: 'Tip was successfully created.'
@@ -43,6 +50,10 @@ class TipsController < ApplicationController
   def destroy
     @tip.destroy
     redirect_to tips_url, notice: 'Tip was successfully destroyed.'
+  end
+
+  def done
+
   end
 
   private
