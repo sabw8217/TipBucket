@@ -58,28 +58,29 @@
     });
 
     $("#height_short_btn").click(function() {
-        $("#height_short_btn").addClass("active");
-        $("#height_average_btn").removeClass("active");
-        $("#height_tall_btn").removeClass("active");
+        $("#height_short_btn").addClass("large-button-pushed");
+        $("#height_average_btn").removeClass("large-button-pushed");
+        $("#height_tall_btn").removeClass("large-button-pushed");
         $("#tip_height").val("Short");
     });
 
       $("#height_average_btn").click(function() {
-          $("#height_average_btn").addClass("active");
-          $("#height_short_btn").removeClass("active");
-          $("#height_tall_btn").removeClass("active");
+          $("#height_average_btn").addClass("large-button-pushed");
+          $("#height_short_btn").removeClass("large-button-pushed");
+          $("#height_tall_btn").removeClass("large-button-pushed");
           $("#tip_height").val("Average");
       });
 
       $("#height_tall_btn").click(function() {
-          $("#height_tall_btn").addClass("active");
-          $("#height_short_btn").removeClass("active");
-          $("#height_average_btn").removeClass("active");
+          $("#height_tall_btn").addClass("large-button-pushed");
+          $("#height_short_btn").removeClass("large-button-pushed");
+          $("#height_average_btn").removeClass("large-button-pushed");
           $("#tip_height").val("Tall");
       });
 
       $("#haircolor_black_btn").click(function() {
           $("#haircolor_black_btn").addClass("active");
+          $("#haircolor_red_btn").removeClass("active");
           $("#haircolor_brown_btn").removeClass("active");
           $("#haircolor_blonde_btn").removeClass("active");
           $("#haircolor_other_btn").removeClass("active");
@@ -88,14 +89,25 @@
 
       $("#haircolor_brown_btn").click(function() {
           $("#haircolor_brown_btn").addClass("active");
+          $("#haircolor_red_btn").removeClass("active");
           $("#haircolor_black_btn").removeClass("active");
           $("#haircolor_blonde_btn").removeClass("active");
           $("#haircolor_other_btn").removeClass("active");
           $("#tip_haircolor").val("Brown");
       });
 
+      $("#haircolor_red_btn").click(function() {
+          $("#haircolor_red_btn").addClass("active");
+          $("#haircolor_blonde_btn").removeClass("active");
+          $("#haircolor_black_btn").removeClass("active");
+          $("#haircolor_brown_btn").removeClass("active");
+          $("#haircolor_other_btn").removeClass("active");
+          $("#tip_haircolor").val("Red");
+      });
+
       $("#haircolor_blonde_btn").click(function() {
           $("#haircolor_blonde_btn").addClass("active");
+          $("#haircolor_red_btn").removeClass("active");
           $("#haircolor_black_btn").removeClass("active");
           $("#haircolor_brown_btn").removeClass("active");
           $("#haircolor_other_btn").removeClass("active");
@@ -104,10 +116,11 @@
 
       $("#haircolor_other_btn").click(function() {
           $("#haircolor_other_btn").addClass("active");
+          $("#haircolor_red_btn").removeClass("active");
           $("#haircolor_black_btn").removeClass("active");
           $("#haircolor_brown_btn").removeClass("active");
           $("#haircolor_blonde_btn").removeClass("active");
-          $("#tip_haircolor").val("Other");
+          $("#tip_haircolor").val("Gray");
       });
   });
 

@@ -64,10 +64,10 @@
         </div>
     </div>
     <div class="row-fluid">
-        <div class="span2">
-            <%= f.label t(:gender), :class => 'tlabel' %>
-        </div>
         <div class=span4>
+            <div class="form-label">
+                <%= f.label :gender, "Gender", :class => 'tlabel' %>
+            </div>
             <div class="btn-group" data-toggle="buttons-radio">
                 <button type="button" class="btn large-button" id="gender_male_btn">Male</button>
                 <button type="button" class="btn large-button" id="gender_female_btn">Female</button>
@@ -98,10 +98,11 @@
                 <%= f.label :haircolor, "Hair Color", :class => 'tlabel' %>
             </div>
             <div class="btn-group" data-toggle="buttons-radio">
-                <button type="button" class="btn btn-primary" id="haircolor_black_btn">Black</button>
-                <button type="button" class="btn btn-primary" id="haircolor_brown_btn">Brown</button>
-                <button type="button" class="btn btn-primary" id="haircolor_blonde_btn">Blonde</button>
-                <button type="button" class="btn btn-primary" id="haircolor_other_btn">Other</button>
+                <button type="button" class="btn race-button black-button" id="haircolor_black_btn">Black</button>
+                <button type="button" class="btn race-button brown-button" id="haircolor_brown_btn">Brown</button>
+                <button type="button" class="btn race-button red-button" id="haircolor_blonde_btn">Red</button>
+                <button type="button" class="btn race-button blonde-button" id="haircolor_blonde_btn">Blonde</button>
+                <button type="button" class="btn race-button gray-button" id="haircolor_other_btn">Gray</button>
                 <%= f.hidden_field :haircolor %>
             </div>
         </div>
