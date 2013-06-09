@@ -1,7 +1,9 @@
 <div class="map-container">
   <div class="black-overlay"></div>
+  <h1 class="submit-title">Thank you.</h1>
   <div class="explore-button">Explore Crime Map <strong>&#x25BE;</strong></div>
 </div>
+
 <div class="row-fluid">
   <div class="modal" id="done_modal">
     <div class="modal-header">
@@ -17,6 +19,15 @@
 </div>
 <script type="text/javascript">
   $(document).ready(function() {
+    $(".explore-button").click(function() {
+        $('.map-container').animate({
+          height: "606px"
+        });
+        $('.map-container').css('background-image', "url('/assets/map.png')");
+        $('.map-container').css('background-color', "#A5BFDD");
+        $('.submit-title, .black-overlay').fadeOut('fast');
+        $('.explore-button').fadeOut('fast');
+    });
     $("#dismiss_done").click(function() {
       $("#done_modal").hide();
     });
