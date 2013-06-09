@@ -1,27 +1,38 @@
-<div class="row today">
-  <div class="date-box">
-    <%= Date.today.strftime("%b %-d, %Y") %>
-  </div>
-</div>
-<div class="tips-list row">
-  <div class="span12">
-    <% @tips.each do |tip| %>
-      <div class="row">
-        <div class="date"><%= tip.updated_at.strftime("%l:%M %p") %></div>
-        <div class="tip-box">
-          <div class="tip-title">
-            <div class="crime-type"><%= tip.crime_type %></div>
-            <div class="location">NEXT TO <%= tip.location.upcase %></div>
-          </div>
-          <div class="tip-content">
-            <div class="suspect">
-              <strong><%= tip.height %></strong> <strong><%= tip.race %> <%= tip.gender %></strong> with <strong><%= tip.haircolor %></strong> hair wearing <strong><%= tip.clothes %></strong>
-            </div>
-            <div><%= tip.description %></div>
-          </div>
-        </div>
+<div class="list-container">
+  <div class="row">
+    <div class="today span12">
+      <div class="date-box">
+        <%= Date.today.strftime("%b %-d, %Y") %>
       </div>
-    <% end %>
+    </div>
+
+    <div class="tips-list">
+      <div class="span12">
+        <% @tips.each do |tip| %>
+          <div class="tip">
+            <div class="left">
+              <div class="date">
+                <%= tip.updated_at.strftime("%l:%M %p") %>
+              </div>
+              <div class="take-action">
+                Take action
+              </div>
+            </div>
+            <div class="tip-box">
+              <div class="tip-title">
+                <div class="crime-type"><%= tip.crime_type %></div>
+                <div class="location">NEXT TO <%= tip.location.upcase %></div>
+              </div>
+              <div class="tip-content">
+                <div class="suspect">
+                  <strong><%= tip.height %></strong> <strong><%= tip.race %> <%= tip.gender %></strong> with <strong><%= tip.haircolor %></strong> hair wearing <strong><%= tip.clothes %></strong>
+                </div>
+                <div><%= tip.description %></div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
-
