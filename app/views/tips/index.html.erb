@@ -13,7 +13,7 @@
             <div class="tip">
               <div class="left">
                 <div class="date">
-                  <%= tip.updated_at.strftime("%l:%M %p") %>
+                  <%= tip.updated_at.localtime.strftime("%l:%M %p") %>
                 </div>
                 <div class="take-action">
                   Take action

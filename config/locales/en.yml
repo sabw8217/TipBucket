@@ -35,3 +35,4 @@ en:
   suspect_desc: "Suspect Description"
   gender: "Gender"
   add_details: "Additional Details"
+  desc_prompt: "Anything you saw or heard may be helpful"

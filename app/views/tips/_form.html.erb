@@ -32,7 +32,7 @@
     </div>
     <div class="row-fluid">
         <div class="span12 suspect-section section-title">
-          <div class="left-slashes"></div><h1 class="section-title"><%= t(:suspect_desc) %></h1><div class="right-slashes-suspect"></div>
+          <div class="left-slashes"></div><h1 class="section-title"><%= t(:suspect_desc) %></h1><div class="right-slashes"></div>
           <div class="clearfix"></div>
         </div>
     </div>
@@ -71,23 +71,33 @@
                 <%= f.label :haircolor, "Hair Color", :class => 'tlabel' %>
             </div>
             <div class="btn-group" data-toggle="buttons-radio">
-                <button type="button" class="btn hair-button black-button" id="haircolor_black_btn">Black</button>
-                <button type="button" class="btn hair-button brown-button" id="haircolor_brown_btn">Brown</button>
-                <button type="button" class="btn hair-button red-button" id="haircolor_red_btn">Red</button>
-                <button type="button" class="btn hair-button blonde-button" id="haircolor_blonde_btn">Blonde</button>
-                <button type="button" class="btn hair-button gray-button" id="haircolor_gray_btn">Gray</button>
+                <button type="button" class="btn hair-button black-button" id="haircolor_black_btn">
+                  <%= image_tag "white_check.png", :class => "hair-check" %>
+                </button>
+                <button type="button" class="btn hair-button brown-button" id="haircolor_brown_btn">
+                  <%= image_tag "white_check.png", :class => "hair-check" %>
+                </button>
+                <button type="button" class="btn hair-button red-button" id="haircolor_red_btn">
+                  <%= image_tag "white_check.png", :class => "hair-check" %>
+                </button>
+                <button type="button" class="btn hair-button blonde-button" id="haircolor_blonde_btn">
+                  <%= image_tag "white_check.png", :class => "hair-check" %>
+                 </button>
+                <button type="button" class="btn hair-button gray-button" id="haircolor_gray_btn">
+                  <%= image_tag "white_check.png", :class => "hair-check" %>
+                </button>
                 <%= f.hidden_field :haircolor %>
             </div>
         </div>
     </div>
     <div class="row-fluid">
         <div class="span12 suspect-section section-title">
-            <h1 class="section-title"><%= t(:add_details) %></h1>
+          <div class="left-slashes"></div><div class="right-slashes-details"></div><h1 class="section-title"><%= t(:add_details) %></h1>
         </div>
     </div>
     <div class="row-fluid">
         <div class="span8">
-            <span class="desc-row">Anything you saw or heard may be helpful</span><%= f.text_area :description, :class => 'desc-row' %>
+            <span class="desc-row"><%= t(:desc_prompt) %></span><%= f.text_area :description, :class => 'desc-row' %>
         </div>
     </div>
     <div class="row-fluid">
@@ -115,6 +125,6 @@
   <%= f.hidden_field :long %>
   <%= f.hidden_field :geocoded %>
   <div class="actions">
-    <%= f.submit :class => 'submit_btn' %>
+    <%= f.submit "Submit", :class => 'submit_btn btn-success' %>
   </div>
 <% end %>
