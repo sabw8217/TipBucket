@@ -65,7 +65,7 @@
     </div>
     <div class="row-fluid">
         <div class="span12 suspect-section section-title">
-          <div class="left-slashes"></div><h1 class="section-title"><%= t(:suspect_desc) %></h1><div class="right-slashes-suspect"></div>
+          <div class="left-slashes"></div><h1 class="section-title"><%= t(:suspect_desc) %></h1><div class="right-slashes"></div>
           <div class="clearfix"></div>
         </div>
     </div>
@@ -125,12 +125,12 @@
     </div>
     <div class="row-fluid">
         <div class="span12 suspect-section section-title">
-            <h1 class="section-title"><%= t(:add_details) %></h1>
+          <div class="left-slashes"></div><div class="right-slashes-details"></div><h1 class="section-title"><%= t(:add_details) %></h1>
         </div>
     </div>
     <div class="row-fluid">
         <div class="span8">
-            <span class="desc-row">Anything you saw or heard may be helpful</span><%= f.text_area :description, :class => 'desc-row' %>
+            <span class="desc-row"><%= t(:desc_prompt) %></span><%= f.text_area :description, :class => 'desc-row' %>
         </div>
     </div>
     <div class="row-fluid">
