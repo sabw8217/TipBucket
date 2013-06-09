@@ -10,3 +10,23 @@
     display: inline-block;
     background-image: url("target.png");
 }
+
+.large-button {
+    height: 80px;
+    width: 150px;
+    color: white;
+    background-color: #777777;
+    background-image: none;
+}
+
+.large-button:hover {
+    color: white;
+    background-color: #444444;
+    background-image: none;
+}
+
+.large-button:active {
+    color: white;
+    background-color: #444444;
+    background-image: none;
+}

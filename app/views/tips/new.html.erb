@@ -33,22 +33,13 @@
     $("#gender_male_btn").click(function() {
         $("#gender_male_btn").addClass("active");
         $("#gender_female_btn").removeClass("active");
-        $("#gender_unknown_btn").removeClass("active");
         $("#tip_gender").val("Male");
     });
 
     $("#gender_female_btn").click(function() {
         $("#gender_female_btn").addClass("active");
         $("#gender_male_btn").removeClass("active");
-        $("#gender_unknown_btn").removeClass("active");
         $("#tip_gender").val("Female");
-    });
-
-    $("#gender_unknown_btn").click(function() {
-        $("#gender_unknown_btn").addClass("active");
-        $("#gender_male_btn").removeClass("active");
-        $("#gender_female_btn").removeClass("active");
-        $("#tip_gender").val("Unknown");
     });
 
     $("#height_short_btn").click(function() {

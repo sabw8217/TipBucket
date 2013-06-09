@@ -57,62 +57,45 @@
                 <option>5</option>
             </select>
     </div>
-<% if false %>
-        <div class="span2">
-            
-        </div>
-        <div class="span4">
-            
-        </div>
-        <div class="span2">
-            <%= f.check_box :has_occurred, :class => 'tlabel' %><%= f.label :has_occurred, "Not Yet", :class => 'tlabel' %>
-        </div>
- <% end %>
-
     <div class="row-fluid">
         <div class="span12 suspect-section section-title">
             <h1 class="section-title">Suspect Description</h1>
         </div>
     </div>
     <div class="row-fluid">
-        <div class="span2">
-            <%= f.label "Gender", :class => 'tlabel' %>
-        </div>
-        <div class=span4>
+        <div class="span4">
+            <div class="form-label">
+                <%= f.label "Gender", :class => 'tlabel' %>
+            </div>
             <div class="btn-group" data-toggle="buttons-radio">
-                <button type="button" class="btn btn-primary" id="gender_male_btn">Male</button>
-                <button type="button" class="btn btn-primary" id="gender_female_btn">Female</button>
-                <button type="button" class="btn btn-primary" id="gender_unknown_btn">Unknown</button>
+                <button type="button" class="btn large-button" id="gender_male_btn">Male</button>
+                <button type="button" class="btn large-button" id="gender_female_btn">Female</button>
                 <%= f.hidden_field :gender %>
             </div>
         </div>
+        <div class="span4">
+            <div class="form-label">
+                <%= f.label :race, "Ethnicity", :class => 'tlabel' %>
+            </div>
+            <%= f.select :race, ['White','African American','American Indian', 'Asian', 'Hispanic', 'Multiracial'], { :prompt => 'Select one'} %>
+        </div>
     </div>
     <div class="row-fluid">
-        <div class="span2">
-            <%= f.label :race, "Race", :class => 'tlabel' %>
-        </div>
-        <div class="span4">
-          <%= f.select :race, ['1','2','3'], { :prompt => 'Select a race'} %>
-        </div>
-    </div>
-    <div class="row-fluid">
-        <div class="span2">
-            <%= f.label :height, "Height", :class => 'tlabel' %>
-        </div>
-        <div class="span4">
+        <div class="span6">
+            <div class="form-label">
+                <%= f.label :height, "Height", :class => 'tlabel' %>
+            </div>
             <div class="btn-group" data-toggle="buttons-radio">
-                <button type="button" class="btn btn-primary" id="height_short_btn">Short</button>
-                <button type="button" class="btn btn-primary" id="height_average_btn">Average</button>
-                <button type="button" class="btn btn-primary" id="height_tall_btn">Tall</button>
+                <button type="button" class="btn large-button" id="height_short_btn">Short</button>
+                <button type="button" class="btn large-button" id="height_average_btn">Average</button>
+                <button type="button" class="btn large-button" id="height_tall_btn">Tall</button>
                 <%= f.hidden_field :height %>
             </div>
         </div>
-    </div>
-    <div class="row-fluid">
-        <div class="span2">
-            <%= f.label :haircolor, "Hair Color", :class => 'tlabel' %>
-        </div>
         <div class="span4">
+            <div class="form-label">
+                <%= f.label :haircolor, "Hair Color", :class => 'tlabel' %>
+            </div>
             <div class="btn-group" data-toggle="buttons-radio">
                 <button type="button" class="btn btn-primary" id="haircolor_black_btn">Black</button>
                 <button type="button" class="btn btn-primary" id="haircolor_brown_btn">Brown</button>
