@@ -27,8 +27,13 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.0.1'
 
+# Ruby Racer
+gem 'therubyracer'
+
 # LESS CSS
 gem 'less-rails'
+
+gem 'twitter-bootstrap-rails', '2.1.7'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

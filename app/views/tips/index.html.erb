@@ -1,25 +1,17 @@
 <h1>Listing tips</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="tips-list row">
+  <div class="span9">
     <% @tips.each do |tip| %>
-      <tr>
-        <td><%= link_to 'Show', tip %></td>
-        <td><%= link_to 'Edit', edit_tip_path(tip) %></td>
-        <td><%= link_to 'Destroy', tip, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="tip-box">
+        <span class="show"><%= link_to 'Show', tip %></span>
+        <span class="edit"><%= link_to 'Edit', edit_tip_path(tip) %></span>
+        <span class="destroy"><%= link_to 'Destroy', tip, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+      </div>
     <% end %>
-  </tbody>
-</table>
+  </div>
+  <div class="span3">
+    <%= link_to 'New Tip', new_tip_path %>
+  </div>
+</div>
 
-<br>
-
-<%= link_to 'New Tip', new_tip_path %>
