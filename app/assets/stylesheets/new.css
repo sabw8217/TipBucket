@@ -11,6 +11,7 @@
     background-image: url("target.png");
 }
 
+<<<<<<< HEAD
 .large-button {
     height: 80px;
     width: 150px;
@@ -29,4 +30,35 @@
     color: white;
     background-color: #444444;
     background-image: none;
+}
+
+body.bignav {
+    padding-top: 100px;
+}
+
+.navbar {
+    height: 100px;
+}
+
+.navbar .navbar-inner {
+    height: 100%;
+}
+.navbar .navbar-inner .container {
+    height: 100%;
+}
+
+.sfpd strong {
+    margin-left: 10px;
+    vertical-align: middle;
+    color: black;
+}
+
+.pull-right {
+    padding-top: 25px;
+    height: 100%;
+}
+
+.dropdown {
+    border: 1px solid #808080;
+    border-radius: 3px;
 }

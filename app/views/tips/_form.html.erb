@@ -14,7 +14,7 @@
                 <%= f.label :has_occurred, t(:when), :class => 'tlabel' %>
             </div>
             <select>
-                <option default=true>Just Happened</option>
+                <option default=true><%= t(:just_hap) %></option>
                 <option>1 PM</option>
                 <option>2 PM</option>
                 <option>3 PM</option>
@@ -41,12 +41,12 @@
                 <option>12 AM</option>
             </select>
             <label class="checkbox">
-                <input type="checkbox"> Hasn't happened yet
+                <input type="checkbox"> <%= t(:hasnt_hap) %>
             </label>
         </div>
         <div class="span4">
             <div class="form-label">
-                <%= f.label :crime_type, "Type of Crime", :class => 'tlabel' %>
+                <%= f.label :crime_type, t(:crime_type), :class => 'tlabel' %>
             </div>
             <select>
                 <option default=true>Select One</option>
@@ -59,14 +59,14 @@
     </div>
     <div class="row-fluid">
         <div class="span12 suspect-section section-title">
-            <h1 class="section-title">Suspect Description</h1>
+            <h1 class="section-title"><%= t(:suspect_desc) %></h1>
         </div>
     </div>
     <div class="row-fluid">
-        <div class="span4">
-            <div class="form-label">
-                <%= f.label "Gender", :class => 'tlabel' %>
-            </div>
+        <div class="span2">
+            <%= f.label t(:gender), :class => 'tlabel' %>
+        </div>
+        <div class=span4>
             <div class="btn-group" data-toggle="buttons-radio">
                 <button type="button" class="btn large-button" id="gender_male_btn">Male</button>
                 <button type="button" class="btn large-button" id="gender_female_btn">Female</button>

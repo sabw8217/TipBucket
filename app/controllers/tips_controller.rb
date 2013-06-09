@@ -1,9 +1,12 @@
 class TipsController < ApplicationController
   before_action :set_tip, only: [:show, :edit, :update, :destroy]
 
+  layout 'tip'
+
   # GET /tips
   def index
     @tips = Tip.all.order('updated_at DESC')
+    render :layout => 'application'
   end
 
   # GET /tips/1
