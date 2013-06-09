@@ -1,6 +1,18 @@
+@font-face {
+	font-family: 'Gotham';
+	src: url('fonts/GothamHTF-Book.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'Gotham';
+	font-weight: bold;
+	src: url('fonts/GothamHTF-Bold.otf') format('opentype');
+}
+
 body {
 	padding-top: 60px;
 	background: #f0f1f2;
+	font-family: 'Gotham';
 }
 
 .list-container {
@@ -39,7 +51,7 @@ body {
 }
 
 .tip-box {
-	border: 1px solid #eee;
+	border-bottom: 1px solid #eee;
 	margin-bottom: 20px;
 	margin-left: 150px;
 	margin-right: 20px;
@@ -69,3 +81,26 @@ body {
 	float: right;
 }
 
+.form-label {
+	margin-bottom: 20px;
+	font-size: 18pt;
+}
+
+.tlabel {
+	font-weight: bold;
+}
+
+.incident-section {
+	text-align: center;
+	margin-bottom: 90px;
+}
+
+input[type="text"], select {
+	height: 70px;
+	width: 300px;
+}
+
+input.checkbox {
+	height: 40px;
+	width: 40px;
+}

@@ -25,7 +25,7 @@
               </div>
               <div class="tip-content">
                 <div class="suspect">
-                  <strong><%= tip.height %></strong> <strong><%= tip.race %> <%= tip.gender %></strong> with <strong><%= tip.haircolor %></strong> hair wearing <strong><%= tip.clothes %></strong>
+                  <strong><% if tip.height or tip.race or tip.gender %><%= tip.height %></strong> <strong><%= tip.race %> <%= tip.gender %></strong> with <% end %><strong><% if tip.haircolor %><%= tip.haircolor %></strong> hair <% end %><% if tip.clothes %>wearing <strong><%= tip.clothes %><% end %></strong>
                 </div>
                 <div><%= tip.description %></div>
               </div>

@@ -16,7 +16,12 @@
 
     $(".btn").click(function() {
       return false;
-    })
+    });
+
+    $("#get_gender .btn").click(function() {
+      $("#get_gender .btn").removeClass('active');
+      $(this).addClass('active');
+    });
   });
 
 </script>
