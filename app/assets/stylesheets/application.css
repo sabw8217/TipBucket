@@ -11,14 +11,3 @@
  *= require_self
  *= require_tree .
  */
-
-.sfpd {
-    background: url('sfpd1.jpeg') no-repeat;
-    background-size: 30px auto;
-}
-
-.sfpd strong {
-    margin-left: 20px;
-    color: black;
-}
-
