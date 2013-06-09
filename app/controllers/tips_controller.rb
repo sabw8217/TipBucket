@@ -3,7 +3,7 @@ class TipsController < ApplicationController
 
   # GET /tips
   def index
-    @tips = Tip.all
+    @tips = Tip.all.order('updated_at DESC')
   end
 
   # GET /tips/1

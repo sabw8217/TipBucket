@@ -1,17 +1,27 @@
-<h1>Listing tips</h1>
-
+<div class="row today">
+  <div class="date-box">
+    <%= Date.today.strftime("%b %-d, %Y") %>
+  </div>
+</div>
 <div class="tips-list row">
-  <div class="span9">
+  <div class="span12">
     <% @tips.each do |tip| %>
-      <div class="tip-box">
-        <span class="show"><%= link_to 'Show', tip %></span>
-        <span class="edit"><%= link_to 'Edit', edit_tip_path(tip) %></span>
-        <span class="destroy"><%= link_to 'Destroy', tip, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+      <div class="row">
+        <div class="date"><%= tip.updated_at.strftime("%l:%M %p") %></div>
+        <div class="tip-box">
+          <div class="tip-title">
+            <div class="crime-type"><%= tip.crime_type %></div>
+            <div class="location">NEXT TO <%= tip.location.upcase %></div>
+          </div>
+          <div class="tip-content">
+            <div class="suspect">
+              <strong><%= tip.height %></strong> <strong><%= tip.race %> <%= tip.gender %></strong> with <strong><%= tip.haircolor %></strong> hair wearing <strong><%= tip.clothes %></strong>
+            </div>
+            <div><%= tip.description %></div>
+          </div>
+        </div>
       </div>
     <% end %>
-  </div>
-  <div class="span3">
-    <%= link_to 'New Tip', new_tip_path %>
   </div>
 </div>
 
