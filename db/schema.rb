@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130608224252) do
+ActiveRecord::Schema.define(version: 20130609000801) do
 
   create_table "tips", force: true do |t|
     t.string   "location"
@@ -20,6 +20,11 @@ ActiveRecord::Schema.define(version: 20130608224252) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "height"
+    t.string   "haircolor"
+    t.string   "race"
+    t.string   "gender"
+    t.string   "clothes"
   end
 
 end
