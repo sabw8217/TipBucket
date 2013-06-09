@@ -12,12 +12,5 @@ function positionCb(position) {
   $("#tip_location").val("Current Location");
   $("#tip_lat").val(lat);
   $("#tip_long").val(long);
+  $("#tip_geocoded").val(true);
 }
-
-$(document).ready(function() {
-  $("#get_location").click(function() {
-    debugger;
-    getLocation();
-    return false;
-  });
-});
