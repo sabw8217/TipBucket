@@ -9,5 +9,9 @@
       getLocation();
       return false;
     });
+
+    $("select").change(function() {
+        $(this).find("option[default=true]").remove();
+    });
   });
 </script>
