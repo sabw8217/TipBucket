@@ -16,8 +16,8 @@ class TipsController < ApplicationController
   end
 
   # GET /tips/1/edit
-  def edit
-  end
+  #def edit
+  #end
 
   # POST /tips
   def create
@@ -36,21 +36,21 @@ class TipsController < ApplicationController
       render action: 'new'
     end
   end
-
-  # PATCH/PUT /tips/1
-  def update
-    if @tip.update(tip_params)
-      redirect_to @tip, notice: 'Tip was successfully updated.'
-    else
-      render action: 'edit'
-    end
-  end
+  #
+  ## PATCH/PUT /tips/1
+  #def update
+  #  if @tip.update(tip_params)
+  #    redirect_to @tip, notice: 'Tip was successfully updated.'
+  #  else
+  #    render action: 'edit'
+  #  end
+  #end
 
   # DELETE /tips/1
-  def destroy
-    @tip.destroy
-    redirect_to tips_url, notice: 'Tip was successfully destroyed.'
-  end
+  #def destroy
+  #  @tip.destroy
+  #  redirect_to tips_url, notice: 'Tip was successfully destroyed.'
+  #end
 
   def done
 
