@@ -31,7 +31,9 @@
                     <strong><% if tip.height or tip.race or tip.gender %><%= tip.height %></strong> <strong><%= tip.race %> <%= tip.gender %></strong> with <% end %><strong><% if tip.haircolor %><%= tip.haircolor %></strong> hair <% end %><% if tip.clothes %>wearing <strong><%= tip.clothes %><% end %></strong>
                   </span>
                 </div>
+                <% if tip.description != "" %>
                 <div class="tip-description"><%= tip.description %></div>
+                <% end %>
               </div>
             </div>
           <% end %>
