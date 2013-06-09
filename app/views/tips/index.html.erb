@@ -20,7 +20,7 @@
                 </div>
               </div>
               <div class="tip-box">
-                <div class="take-action">Took Action</div>
+                <div class="take-action">Take Action</div>
                 <div class="crime-type"><%= tip.crime_type ? tip.crime_type.capitalize : ""%></div>
 
                 <div class="location"><img src="/assets/pin.png" class="icon"><span class="location-text"><%= tip.location %></span></div>
@@ -40,3 +40,12 @@
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.take-action').click(function() {
+      $(this).toggleClass('took-action');
+      $(this).text('Took Action');
+    });
+  });
+</script>
