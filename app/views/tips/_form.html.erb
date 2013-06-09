@@ -8,10 +8,13 @@
     </div>
     <div class="row-fluid">
       <div class="span2"><%= f.label :has_occurred, "When", :class => 'tlabel' %></div>
-      <div class="span4"><div class="btn-group">
-        <button class="btn">Has occurred</button>
-        <button class="btn">Not yet</button>
-      </div></div>
+      <div class="span4">
+          <div class="btn-group" data-toggle="buttons-radio">
+              <button type="button" class="btn btn-primary" id="has_occurred_btn">Has occurred</button>
+              <button type="button" class="btn btn-primary" id="not_yet_btn">Not yet</button>
+              <%= f.hidden_field :has_occurred %>
+          </div>
+      </div>
     </div>
     <div class="row-fluid">
       <div class="span4 offset2">
@@ -60,14 +63,7 @@
             <%= f.label :crime_type, "What", :class => 'tlabel' %>
         </div>
         <div class="span4">
-            <select>
-                <option default=true>Select a crime type</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-            </select>
+            <%= f.select :crime_type, ['1','2','3'], { :prompt => 'Select a crime type'} %>
         </div>
     </div>
     <div class="row-fluid">
@@ -80,10 +76,11 @@
             <%= f.label "Gender", :class => 'tlabel' %>
         </div>
         <div class=span4>
-            <div id="get_gender" class="btn-group" data-toggle="buttons-radio">
-                <button type="button" class="btn btn-primary">Male</button>
-                <button type="button" class="btn btn-primary">Female</button>
-                <button type="button" class="btn btn-primary">Unknown</button>
+            <div class="btn-group" data-toggle="buttons-radio">
+                <button type="button" class="btn btn-primary" id="gender_male_btn">Male</button>
+                <button type="button" class="btn btn-primary" id="gender_female_btn">Female</button>
+                <button type="button" class="btn btn-primary" id="gender_unknown_btn">Unknown</button>
+                <%= f.hidden_field :gender %>
             </div>
         </div>
     </div>
@@ -92,14 +89,7 @@
             <%= f.label :race, "Race", :class => 'tlabel' %>
         </div>
         <div class="span4">
-            <select>
-                <option default=true>Select a race</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-            </select>
+          <%= f.select :race, ['1','2','3'], { :prompt => 'Select a race'} %>
         </div>
     </div>
     <div class="row-fluid">
@@ -107,10 +97,11 @@
             <%= f.label :height, "Height", :class => 'tlabel' %>
         </div>
         <div class="span4">
-            <div class="btn-group">
-                <button class="btn">Short</button>
-                <button class="btn">Average</button>
-                <button class="btn">Tall</button>
+            <div class="btn-group" data-toggle="buttons-radio">
+                <button type="button" class="btn btn-primary" id="height_short_btn">Short</button>
+                <button type="button" class="btn btn-primary" id="height_average_btn">Average</button>
+                <button type="button" class="btn btn-primary" id="height_tall_btn">Tall</button>
+                <%= f.hidden_field :height %>
             </div>
         </div>
     </div>
@@ -119,11 +110,12 @@
             <%= f.label :haircolor, "Hair Color", :class => 'tlabel' %>
         </div>
         <div class="span4">
-            <div class="btn-group">
-                <button class="btn">Black</button>
-                <button class="btn">Brown</button>
-                <button class="btn">Blonde</button>
-                <button class="btn">Other</button>
+            <div class="btn-group" data-toggle="buttons-radio">
+                <button type="button" class="btn btn-primary" id="haircolor_black_btn">Black</button>
+                <button type="button" class="btn btn-primary" id="haircolor_brown_btn">Brown</button>
+                <button type="button" class="btn btn-primary" id="haircolor_blonde_btn">Blonde</button>
+                <button type="button" class="btn btn-primary" id="haircolor_other_btn">Other</button>
+                <%= f.hidden_field :haircolor %>
             </div>
         </div>
     </div>
