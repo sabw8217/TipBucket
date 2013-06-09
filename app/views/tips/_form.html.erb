@@ -1,6 +1,6 @@
 <%= form_for(@tip) do |f| %>
   <%= f.text_field :location %>
-  <%= f.label :location, "Location" %>
+  <%= f.label :location, "Location" %><button id="get_location">Locate me!</button>
   <%= f.text_field :crime_type %>
   <%= f.label :crime_type, "Type of crime" %>
   <%= f.text_area :description %>
@@ -21,6 +21,8 @@
     </div>
   <% end %>
 
+  <%= f.hidden_field :lat %>
+  <%= f.hidden_field :long %>
   <div class="actions">
     <%= f.submit %>
     <%= f.button(value="Cancel") %>
