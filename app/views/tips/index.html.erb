@@ -1,9 +1,12 @@
 <div class="container">
-  <div class="list-container">
+  <div class="list-container" style="margin-top: 35px;">
     <div class="row">
       <div class="today span12">
-        <div class="date-box">
-          <%= Date.today.strftime("%b %-d, %Y") %>
+        <div class="date-box span2">
+          <%= Date.today.strftime("%b %-d, %Y").upcase %>
+        </div>
+        <div class="slashes">
+        \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
         </div>
       </div>
 
@@ -15,23 +18,20 @@
                 <div class="date">
                   <%= tip.updated_at.localtime.strftime("%l:%M %p") %>
                 </div>
-                <div class="take-action">
-                  Take action
-                </div>
               </div>
               <div class="tip-box">
-                <div class="tip-title">
-                  <div class="crime-type"><%= tip.crime_type %></div>
-                  <% if tip.location %>
-                  <div class="location">NEXT TO <%= tip.location.upcase %></div>
-                  <% end %>
-                </div>
-                <div class="tip-content">
-                  <div class="suspect">
+                <div class="take-action">Took Action</div>
+                <div class="crime-type"><%= tip.crime_type.capitalize %></div>
+
+                <div class="location"><img src="/assets/pin.png" class="icon"><span class="location-text"><%= tip.location %></span></div>
+                <div class="when-happened"><img src="/assets/clock.png"><span class="when-text"><%= tip.when_happened %></span></div>
+                <div class="suspect">
+                  <img src="/assets/person.png">
+                  <span class="person-text">
                     <strong><% if tip.height or tip.race or tip.gender %><%= tip.height %></strong> <strong><%= tip.race %> <%= tip.gender %></strong> with <% end %><strong><% if tip.haircolor %><%= tip.haircolor %></strong> hair <% end %><% if tip.clothes %>wearing <strong><%= tip.clothes %><% end %></strong>
-                  </div>
-                  <div><%= tip.description %></div>
+                  </span>
                 </div>
+                <div class="tip-description"><%= tip.description %></div>
               </div>
             </div>
           <% end %>
