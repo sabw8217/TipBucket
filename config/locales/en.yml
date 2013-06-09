@@ -28,3 +28,8 @@ en:
   incident: "Incident Information"
   has_occurred: "Has Occurred"
   not_yet: "Not Yet"
+  just_hap: "Just Happened"
+  hasnt_hap: "Hasn't Happened Yet"
+  crime_type: "Type of Crime"
+  suspect_desc: "Suspect Description"
+  gender: "Gender"

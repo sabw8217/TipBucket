@@ -6,3 +6,8 @@ es:
   incident: "El incidente"
   has_occurred: "Se Ha Producido"
   not_yet: "Todavía No"
+  just_hap: "Acaba de Suceder"
+  hasnt_hap: "No Ha Ocurrido"
+  crime_type: "Tipo de Delito"
+  suspect_desc: "Sospechoso Descripción"
+  gender: "Género"
