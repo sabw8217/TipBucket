@@ -1,10 +1,25 @@
-<h1 style="text-align: center;">Leave a tip</h1>
+<div class="map-container">
+  <div class="black-overlay"></div>
+  <h1 class="submit-title">Submit an anonymous tip</h1>
+  <div class="explore-button">Explore Crime Map</div>
+</div>
 
+<div class="container">
 <%= render :partial => "form" %>
 
 <%= link_to 'Back', tips_path %>
+
+</div>
 <script type="text/javascript">
   $(document).ready(function() {
+
+    $(".explore-button").click(function() {
+        $('.map-container').animate({height: "606px"});
+        $('.submit-title, .black-overlay').fadeOut('fast');
+        $('.explore-button').fadeOut('fast');
+    });
+
+
     $("#get_location").click(function() {
         getLocation();
         return false;
