@@ -67,7 +67,16 @@
 }
 
 body.bignav {
-    padding-top: 100px;
+  padding-top: 100px;
+
+  input {
+    font-size: 18px;
+  }
+
+  select {
+    font-size: 18px;
+  }
+
   .navbar {
     height: 100px;
   }
@@ -100,6 +109,7 @@ body.bignav {
   height: 183px;
   background-color: #333333;
   text-align: center;
+  position: relative;
   .footer-links {
     padding-top: 80px;
     color: white;
@@ -109,4 +119,30 @@ body.bignav {
       padding: 0 3px 0 3px;
     }
   }
+}
+
+.left-slashes {
+  background-image: url('8px_pattern.png');
+  height: 8px;
+  width: 296px;
+  position: relative;
+  top: 30px;
+}
+
+.right-slashes {
+  background-image: url('8px_pattern.png');
+  height: 8px;
+  width: 296px;
+  position: relative;
+  top: 22px;
+  float: right;
+}
+
+.right-slashes-suspect {
+  background-image: url('8px_pattern.png');
+  height: 8px;
+  width: 296px;
+  position: relative;
+  float: right;
+  top: -35px;
 }
