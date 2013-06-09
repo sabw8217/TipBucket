@@ -21,3 +21,10 @@
 
 en:
   hello: "Hello world"
+  leave_tip: "Leave a tip"
+  where: "Location"
+  when: "Time"
+  what: "Type of Crime"
+  incident: "Incident Information"
+  has_occurred: "Has Occurred"
+  not_yet: "Not Yet"

@@ -1,0 +1,8 @@
+es:
+  leave_tip: "Agregar una punta"
+  where: "¿Donde"
+  when: "¿Cuándo"
+  what: "¿Qué"
+  incident: "El incidente"
+  has_occurred: "Se Ha Producido"
+  not_yet: "Todavía No"
