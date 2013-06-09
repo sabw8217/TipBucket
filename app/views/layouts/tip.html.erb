@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="<%= I18n.locale %>">
+<head>
+  <title>TipBucket</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="bignav">
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand sfpd" href="#"><%= image_tag 'sfpd1.jpeg', :style => 'zoom: 10%' %><strong>SFPD Crime Reporting</strong></a>
+      <ul class="nav pull-right">
+        <li class="dropdown" id="locale_sel">
+          <a id="drop3" class="dropdown-toggle" role="button" data-toggle="dropdown" href="#"><%=  t(:lang) %><b class="caret"></b></a>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
+            <li role="presentation"><a role="menuitem" href="<%= new_tip_path(:locale => 'en') %>">English</a></li>
+            <li role="presentation"><a role="menuitem" href="<%= new_tip_path(:locale => 'es') %>">Español</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="container">
+
+  <%= yield %>
+
+</div>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#locale-sel').dropdown();
+  })
+</script>
+</body>
+</html>
