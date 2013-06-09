@@ -1,3 +1,12 @@
 .tlabel {
     display: inline;
 }
+
+.location_ico {
+    height: 16px;
+    width: 16px;
+    position: relative;
+    left: -22px;
+    display: inline-block;
+    background-image: url("target.png");
+}

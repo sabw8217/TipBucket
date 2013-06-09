@@ -32,7 +32,7 @@ class TipsController < ApplicationController
     end
 
     if @tip.save
-      redirect_to @tip, notice: 'Tip was successfully created.'
+      redirect_to done_tips_path
     else
       render action: 'new'
     end
