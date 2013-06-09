@@ -18,49 +18,16 @@
             <div class="form-label">
                 <%= f.label :has_occurred, t(:when), :class => 'tlabel' %>
             </div>
-            <select>
-                <option default=true><%= t(:just_hap) %></option>
-                <option>1 PM</option>
-                <option>2 PM</option>
-                <option>3 PM</option>
-                <option>4 PM</option>
-                <option>5 PM</option>
-                <option>6 PM</option>
-                <option>7 PM</option>
-                <option>8 PM</option>
-                <option>9 PM</option>
-                <option>10 PM</option>
-                <option>11 PM</option>
-                <option>12 PM</option>
-                <option>1 AM</option>
-                <option>2 AM</option>
-                <option>3 AM</option>
-                <option>4 AM</option>
-                <option>5 AM</option>
-                <option>6 AM</option>
-                <option>7 AM</option>
-                <option>8 AM</option>
-                <option>9 AM</option>
-                <option>10 AM</option>
-                <option>11 AM</option>
-                <option>12 AM</option>
-            </select>
+            <%= f.select :occurred_at, ['Happened Now','1 PM','2 PM','3 PM','4 PM','5 PM','6 PM','7 PM','8 PM','9 PM','10 PM','11 PM','12 PM','1 AM','2 AM','3 AM','4 AM','5 AM','6 AM','7 AM','8 AM','9 AM','10 AM','11 AM','12 AM'] %>
             <label class="checkbox">
-                <input type="checkbox"> <%= t(:hasnt_hap) %>
+                <input type="checkbox"><%= t(:hasnt_hap) %>
             </label>
         </div>
         <div class="span4">
             <div class="form-label">
                 <%= f.label :crime_type, t(:crime_type), :class => 'tlabel' %>
             </div>
-            <select>
-                <option default=true>Select One</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-            </select>
+            <%= f.select :crime_type, ['Disturbance','Theft','Assault','Accident','Gunshots','Thread','Property Crime'], { :prompt => 'Select one'} %>
       </div>
     </div>
     <div class="row-fluid">
