@@ -3,11 +3,11 @@
 one:
   location: MyString
   crime_type: MyString
-  has_occured: 
+  has_occurred:
   description: MyText
 
 two:
   location: MyString
   crime_type: MyString
-  has_occured: 
+  has_occurred:
   description: MyText
